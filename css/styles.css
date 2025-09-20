@@ -471,11 +471,14 @@ img {
   padding-top: 100px;
   padding-bottom: 100px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-footer {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .footer-logo-container {
@@ -523,25 +526,21 @@ img {
   height: 100%;
 }
 
-.footer-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .input-email {
-  background: #2e2f42;
+  color: #fff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   border: 1px solid #fff;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   margin-left: 80px;
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
     color: #fff;
     min-width: 36px;
     height: 24px;
@@ -565,6 +564,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-email {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .footer-icons-link:hover,
 .footer-icons-link:focus {
   background-color: #31d0aa;
@@ -576,9 +581,9 @@ img {
   height: 24px;
 }
 
-.footer-desc-label {
-  margin-left: 80px;
-  margin-right: 24px;
+.footer-form {
+  display: flex;
+  align-items: center;
 }
 
 .footer-form-desc {
@@ -594,28 +599,21 @@ img {
 .footer-form-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
   background-color: #4d5ae5;
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
   margin-left: 24px;
-}
-
-.footer-input-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-text-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+}
+
+.icon-telegram-btn {
+  margin-left: 16px;
 }
 
 /*-------MODAL-------*/
@@ -632,7 +630,8 @@ img {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 
 .is-open {
@@ -653,24 +652,35 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  background-color: #e7e9fc;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
-  border: 1px solid #000;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #2e2f42;
-  background-color: #e7e9fc;
+}
+
+.button-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal-close:hover,
 .btn-modal-close:focus {
-  border-radius: none;
   fill: white;
+  border: none;
   background-color: #404bbf;
 }
 
@@ -687,33 +697,36 @@ img {
   margin-bottom: 16px;
 }
 
+.modal-input-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate, #8e8f99);
+  margin-bottom: 4px;
+}
+
 .modal-form-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  padding-left: 34px;
-  padding-right: 16px;
+  padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-wrapper:hover,
-.input-wrapper:focus {
-  border: 1px solid #4d5ae5;
+.modal-form-input:hover,
+.modal-form-input:focus {
+  border-color: #4d5ae5;
   border-radius: 4px;
 }
 
 .input-icon:hover,
 .input-icon:focus {
-  background-color: #4d5ae5;
-}
-
-.modal-input-label {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-bottom: 4px;
+  fill: #4d5ae5;
 }
 
 .modal-form-desc {
@@ -733,16 +746,27 @@ img {
 }
 
 .modal-form-text {
+  color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   min-width: 360px;
   height: 120px;
   padding: 8px 16px;
   resize: none;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &::placeholder {
     fill: rgba(46, 47, 66, 0.4);
   }
+}
+
+.modal-form-text:focus,
+.modal-form-text:hover {
+  border-color: #4d5ae5;
 }
 
 .check-input-label {
@@ -754,19 +778,24 @@ img {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  fill: #404bbf;
+  fill: var(--cloud, #F4F4FD;);
   background-color: #404bbf;
+  border: none;
 }
 
 .check-box {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  fill: transparent;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-check {
@@ -776,13 +805,13 @@ img {
   color: #8e8f99;
   display: flex;
   align-items: center;
+}
 
-  a {
-    line-height: 1.33333;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #4d5ae5;
-  }
+.label-span {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--iris, #4d5ae5);
 }
 
 .btn-send {
@@ -792,15 +821,17 @@ img {
 }
 
 .btn-modal {
+  cursor: pointer;
+  border: none;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   border-radius: 4px;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
