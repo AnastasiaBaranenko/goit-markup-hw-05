@@ -528,6 +528,7 @@ img {
 
 .input-email {
   color: #fff;
+  border: 1px solid #ffffff;
   background-color: transparent;
   font-size: 12px;
   line-height: 2;
@@ -538,7 +539,6 @@ img {
   width: 264px;
   height: 40px;
   padding-left: 16px;
-  margin-left: 80px;
 
   &::placeholder {
     color: #fff;
@@ -584,6 +584,7 @@ img {
 .footer-form {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -763,6 +764,7 @@ img {
   padding: 8px 16px;
   resize: none;
   font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   background-color: transparent;
   outline: transparent;
@@ -784,6 +786,10 @@ img {
   line-height: 1.17;
 }
 
+.textarea-label-modal {
+  margin-bottom: 16px;
+}
+
 .check:checked + .label-check > .check-box {
   width: 16px;
   height: 16px;
@@ -794,7 +800,6 @@ img {
 }
 
 .check-box {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -809,6 +814,7 @@ img {
 }
 
 .label-check {
+  display: inline-flex;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -832,15 +838,18 @@ img {
 }
 
 .btn-modal {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
   cursor: pointer;
   border: none;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #ffffff;
-  border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
