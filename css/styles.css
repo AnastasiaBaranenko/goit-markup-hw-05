@@ -560,14 +560,12 @@ img {
 }
 
 .footer-form-desc {
-  margin-top: 10px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  margin-left: 30px;
 }
 
 .footer-form {
@@ -606,7 +604,6 @@ img {
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
-  margin-left: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -696,8 +693,6 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  width: 360px;
-  padding-top: 48px;
   margin-bottom: 16px;
 }
 
@@ -746,7 +741,6 @@ img {
 
 .input-wrapper {
   position: relative;
-  margin-bottom: 16px;
 }
 
 .modal-form-text:focus,
@@ -836,10 +830,8 @@ img {
   text-align: center;
   color: #ffffff;
   padding: 16px 32px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-right: 120px;
-  margin-left: 119px;
+  margin-right: auto;
+  margin-left: auto;
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
