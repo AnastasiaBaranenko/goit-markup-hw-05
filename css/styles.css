@@ -740,14 +740,19 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-icon:hover,
-.input-icon:focus {
+.modal-form-input:focus + .input-icon {
   fill: #4d5ae5;
 }
 
 .input-wrapper {
   position: relative;
   margin-bottom: 16px;
+}
+
+.modal-form-text:focus,
+.modal-form-text:hover {
+  border-color: #4d5ae5;
+  fill: #4d5ae5;
 }
 
 .textarea-label-modal {
@@ -772,11 +777,6 @@ img {
   &::placeholder {
     fill: rgba(46, 47, 66, 0.4);
   }
-}
-
-.modal-form-text:focus,
-.modal-form-text:hover {
-  border-color: #4d5ae5;
 }
 
 .check-input-label {
@@ -814,8 +814,6 @@ img {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: flex;
-  align-items: center;
   line-height: 1.17;
 }
 
@@ -838,6 +836,10 @@ img {
   text-align: center;
   color: #ffffff;
   padding: 16px 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 120px;
+  margin-left: 119px;
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
